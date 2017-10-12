@@ -33,27 +33,27 @@ require 'yaml'
 
 ########################################
 
-# File.open("data1.txt") do |f|
-# 	f.seek(2, IO::SEEK_SET) #where to start reading
-# 	p f.read(4) #how many bites to read
-# end
-
-# data = File.readlines("data1.txt") #readline returns in an array, with newlines as the break point
-# p data[0] #data can be returned like an array
-
-########################################
-File.open('yaml_data.yaml', 'r').each do |f|
-	puts YAML::load(f)
+File.open("data1.txt") do |f|
+	f.seek(2, IO::SEEK_SET) #where to start reading
+	p f.read(4) #how many bites to read
 end
 
-f4 = File.open('new_yaml.yaml', "w+")
-f4.puts YAML::dump("TEST")
+data = File.readlines("data1.txt") #readline returns in an array, with newlines as the break point
+p data[0] #data can be returned like an array
+
+########################################
+# File.open('yaml_data.yaml', 'r').each do |f|
+# 	puts YAML::load(f)
+# end
+
+# f4 = File.open('new_yaml.yaml', "w+")
+# f4.puts YAML::dump("TEST")
 
 ########################################
 
-f5 = open('data1.txt', "w")
-f5.write('New Data')
-f5.close
+# f5 = open('data1.txt', "w")
+# f5.write('New Data')
+# f5.close
 
 
 
